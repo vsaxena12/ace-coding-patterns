@@ -1,4 +1,4 @@
-package org.dsa.linkedList;
+package org.dsa.linkedListOld;
 
 public class LinkedListNode<T> {
     T data;

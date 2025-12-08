@@ -1,6 +1,6 @@
-package org.dsa.linkedList;
+package org.dsa.linkedListOld;
 
-public class Solution2 {
+public class Solution3 {
 
     public static boolean searchNode(LinkedListNode <Integer> head, int value) {
 

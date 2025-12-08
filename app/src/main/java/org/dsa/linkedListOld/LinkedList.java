@@ -1,6 +1,5 @@
-package org.dsa.linkedList;
+package org.dsa.linkedListOld;
 
-import java.util.*;
 // Template for the linked list
 class LinkedList<T> {
     public LinkedListNode<T> head;

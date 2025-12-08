@@ -1,4 +1,4 @@
-package org.dsa.linkedList;
+package org.dsa.linkedListOld;
 
 public class Solution1 {
     public static LinkedListNode<Integer> insertAtTail(LinkedListNode <Integer> head, int value) {
