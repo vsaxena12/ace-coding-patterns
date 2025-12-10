@@ -64,6 +64,52 @@ public class SinglyLinkedList {
         size++;
     }
 
+    public void removeAtHead() {
+        if(head == null){
+            throw new RuntimeException("HEAD IS EMPTY");
+        }
+        // int value = head.data;
+        head = head.next;
+        size--;
+    }
+
+    public void removeAtTail() {
+        if(head == null){
+            throw new RuntimeException("HEAD IS EMPTY");
+        }
+        ListNode temp = head;
+        ListNode prev = null;
+        while(temp.next != null) {
+            prev = temp;
+            temp = temp.next;
+        }
+        if(prev != null) {
+            prev.next = null;
+            size--;
+        }
+    }
+
+    public void removeAtIndex(int index) {
+        if (index < 0 || index >= size)
+            throw new IndexOutOfBoundsException();
+        if(head == null){
+            throw new RuntimeException("HEAD IS EMPTY");
+        }
+        int currentIndex = 0;
+        if(index == 0) {
+            removeAtHead();
+            return;
+        }
+
+        ListNode temp = head;
+        int i = 0;
+        while(i<index-1) {
+            temp = temp.next;
+            i++;
+        }
+        temp.next = temp.next.next;
+        size--;
+    }
 
 
     public void getSize(){
@@ -104,6 +150,31 @@ public class SinglyLinkedList {
         list.getSize();
 
         list.insertAtIndex(5, 20);
+        list.printLinkedList();
+        list.getSize();
+
+        list.removeAtHead();
+        list.printLinkedList();
+        list.getSize();
+
+        list.removeAtTail();
+        list.printLinkedList();
+        list.getSize();
+
+        list.removeAtTail();
+        list.printLinkedList();
+        list.getSize();
+
+        list.insertAtTail(15);
+        list.printLinkedList();
+        list.getSize();
+
+        list.insertAtTail(20);
+        list.printLinkedList();
+        list.getSize();
+
+
+        list.removeAtIndex(1);
         list.printLinkedList();
         list.getSize();
     }
