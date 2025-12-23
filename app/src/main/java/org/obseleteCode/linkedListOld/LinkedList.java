@@ -1,4 +1,4 @@
-package org.dsa.linkedListOld;
+package org.obseleteCode.linkedListOld;
 
 // Template for the linked list
 class LinkedList<T> {

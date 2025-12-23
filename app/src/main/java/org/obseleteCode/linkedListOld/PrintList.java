@@ -1,4 +1,4 @@
-package org.dsa.linkedListOld;
+package org.obseleteCode.linkedListOld;
 
 // Template for printing the linked list with forward arrows
 class PrintList<T>

@@ -1,4 +1,4 @@
-package org.dsa.linkedListOld;
+package org.obseleteCode.linkedListOld;
 
 public class Solution4 {
     public static boolean deleteByValue(LinkedListNode <Integer> head, int value) {

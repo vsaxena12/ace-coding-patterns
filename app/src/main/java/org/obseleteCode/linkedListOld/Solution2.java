@@ -1,4 +1,4 @@
-package org.dsa.linkedListOld;
+package org.obseleteCode.linkedListOld;
 
 public class Solution2 {
     public static LinkedListNode<Integer> insertAt (LinkedListNode <Integer> head, int data, int previous) {

@@ -1,8 +1,8 @@
-package org.dsa.linkedListOld;
+package org.obseleteCode.linkedListOld;
 
-import static org.dsa.linkedListOld.Solution1.insertAtTail;
-import static org.dsa.linkedListOld.Solution2.insertAt;
-import static org.dsa.linkedListOld.Solution4.deleteByValue;
+import static org.obseleteCode.linkedListOld.Solution1.insertAtTail;
+import static org.obseleteCode.linkedListOld.Solution2.insertAt;
+import static org.obseleteCode.linkedListOld.Solution4.deleteByValue;
 
 public class Driver {
     public static void main(String[] args) {
