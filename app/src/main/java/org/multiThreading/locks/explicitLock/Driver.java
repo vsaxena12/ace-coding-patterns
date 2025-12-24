@@ -1,4 +1,4 @@
-package org.multiThreading.lokcs.explicitLock;
+package org.multiThreading.locks.explicitLock;
 
 public class Driver {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.multiThreading.lokcs.explicitLock;
+package org.multiThreading.locks.explicitLock;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;

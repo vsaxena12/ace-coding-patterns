@@ -1,4 +1,4 @@
-package org.multiThreading.lokcs.intrinsicLock;
+package org.multiThreading.locks.intrinsicLock;
 
 public class BackAccount {
 

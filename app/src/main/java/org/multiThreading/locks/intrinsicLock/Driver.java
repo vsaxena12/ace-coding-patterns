@@ -1,4 +1,4 @@
-package org.multiThreading.lokcs.intrinsicLock;
+package org.multiThreading.locks.intrinsicLock;
 
 public class Driver {
     public static void main(String[] args) {
