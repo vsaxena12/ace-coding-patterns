@@ -17,7 +17,7 @@ public class SinglyLinkedList {
         if(head == null) {
             head = node;
         } else {
-            node.next = head;
+            node.next = head; //Node.next -> Head => Node is added at the left of head
             head = node;
         }
         size++;
@@ -31,9 +31,9 @@ public class SinglyLinkedList {
             ListNode temp = head;
 
             while(temp.next != null) {
-                temp = temp.next;
+                temp = temp.next; //Head -> Node.next => Node is added at the right of head
             }
-            temp.next = node;
+            temp.next = node; //Node.next -> Head => Node is added at the left of head
         }
         size++;
     }
