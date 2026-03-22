@@ -133,7 +133,7 @@ public class SinglyLinkedList {
 
         ListNode temp = head;
         while(temp.next != null) {
-            if(temp.next.data == value) {
+            if(temp.next.val == value) {
                 temp.next = temp.next.next;
                 size--;
                 return;
@@ -211,7 +211,7 @@ public class SinglyLinkedList {
         ListNode temp = head;
 
         while(temp != null) {
-            System.out.print(temp.data+"->");
+            System.out.print(temp.val+"->");
             temp = temp.next;
         }
         System.out.println("NULL");
