@@ -1,56 +1,61 @@
 package org.streams;
 
-import com.google.common.base.Function;
-
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 
 public class Java8Demo {
     public static void main(String[] args) {
-        Thread t1 = new Thread(() -> System.out.println("Hello World!"));
-        t1.start();
+        Employee e1 = new Employee(1, "Ram");
+        Employee e2 = new Employee(2, "Shyam");
+        Employee e3 = new Employee(1, "Ram");
 
-        Math addition = (a, b) -> a+b;
-        System.out.println(addition.operation(1,2));
+        Map<Integer, String> map = new HashMap<>();
+        map.put(e1.getId(), "Emp1");
+        map.put(e2.getId(), "Emp2");
+        map.put(e3.getId(), "Emp3");
 
-        //Predicate -> Functional interface, function that takes one input and returns a boolean.
-        System.out.println("\n-----------Predicate-----------");
-        Predicate<Integer> isEven = x -> x%2 == 0;
+        if(e1.hashCode() == e3.hashCode()) {
+           System.out.println("e1.hashCode() == e3.hashCode()");
+        }
 
-        Predicate<String> isWordStartsWithA = x -> x.toLowerCase().startsWith("a");
-        Predicate<String> isWordEndsWithA = x -> x.toLowerCase().endsWith("t");
-        Predicate<String> and = isWordStartsWithA.and(isWordEndsWithA);
-        System.out.println(and.test("Ankit"));
+        if(e1.equals(e3)) {
+            System.out.println("e1.equals(e3)");
+        }
 
-        // Functions
-        System.out.println("\n-----------Functions-----------");
-        Function<Integer, Integer> doubleIt = x -> 2 * x;
-        Function<Integer, Integer> tripleIt = x -> 2 * x;
+        System.out.println(map.size());
+        System.out.println(map);
 
-        System.out.println(doubleIt.andThen(tripleIt).apply(20));
-
-        //Consumer
-        System.out.println("\n-----------Consumer-----------");
-        Consumer<Integer> print = x -> System.out.println(x);
-        print.accept(51);
-
-        //Supplier
-        System.out.println("\n-----------Supplier-----------");
-        Supplier<String> giveHelloWorld = () -> "Hello World!";
-        System.out.println(giveHelloWorld.get());
     }
 }
 
-@FunctionalInterface
-interface Math {
-    int operation(int a, int b);
-}
 
-//class Task implements Runnable {
-//
-//    @Override
-//    public void run() {
-//        System.out.println("Hello World!");
-//    }
-//}
+class Employee {
+    private int id;
+    private String name;
+
+    Employee(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return id == employee.id && Objects.equals(name, employee.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name);
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
