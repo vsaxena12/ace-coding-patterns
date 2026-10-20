@@ -41,7 +41,7 @@ public class ArrayListMain {
      *  o1-o2 => Ascending
      *  o2-o1 => Descending
      */
-    public static void  main(String[] args) {
+    public static void  main(String[] args) throws Exception {
         List<Integer> list = new ArrayList<>();
         list.add(100);
         list.add(53);

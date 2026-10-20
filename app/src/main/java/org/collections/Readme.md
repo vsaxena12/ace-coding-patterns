@@ -15,4 +15,4 @@
 
 
 
-![collectionframework.png](images/collectionframework.png)
+![collectionframework.png](../../../../resources/images/collectionframework.png)
