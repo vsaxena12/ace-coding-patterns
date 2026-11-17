@@ -55,8 +55,5 @@ public class ArrayListMain {
         List<String> words = Arrays.asList("banana", "apple", "date");
         words.sort(new StringLengthComparator());
         System.out.println(words);
-
-
-
     }
 }
