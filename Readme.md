@@ -1,6 +1,6 @@
 # Ace The Coding Interview
 
-## Time: 2.5 months
+## Time: 1.5 months
 
 ## Topics
 1. Big O Notation - https://www.educative.io/module/lesson/big-o-notation/R8EGwNJlXmw
@@ -12,3 +12,4 @@
 7. Concurrency
 8. Streams and Lambdas
 9. Design Patterns
+10. LLD
